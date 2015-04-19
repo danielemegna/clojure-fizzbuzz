@@ -11,12 +11,15 @@
 )
 
 (defn fizzbuzz [number]
+  
+  (def dictionary {3 "Fizz" 5 "Buzz"})
+
   (if (and (= 0 (rem number 3)) (= 0 (rem number 5)))
     "FizzBuzz"
     (if (= 0 (rem number 3))
-      "Fizz"
+      (dictionary 3)
       (if (= 0 (rem number 5))
-        "Buzz"
+        (dictionary 5)
         (str number)
       )
     )
