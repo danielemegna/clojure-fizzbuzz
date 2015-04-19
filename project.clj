@@ -1,6 +1,6 @@
 (defproject clojure-fizzbuzz "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Exploring for the first time this programming language. A fizzbuzz TDD kata done in clojure."
+  :url "about.me/danielemegna"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]]
