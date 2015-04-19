@@ -1,6 +1,6 @@
 (ns clojure-fizzbuzz.core
   (:gen-class))
-
+ 
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
@@ -17,14 +17,17 @@
     5 "Buzz"
   })
 
-  (if (and (= 0 (rem number 3)) (= 0 (rem number 5)))
-    (str (dictionary 3) (dictionary 5))
-    (if (= 0 (rem number 3))
-      (dictionary 3)
-      (if (= 0 (rem number 5))
-        (dictionary 5)
-        (str number)
-      )
+
+  (def result
+    (str
+      (if (= 0 (rem number 3)) (dictionary 3) "")
+      (if (= 0 (rem number 5)) (dictionary 5) "")
     )
   )
+
+  (if (clojure.string/blank? result)
+    (str number)
+    result
+  )
+
 )
