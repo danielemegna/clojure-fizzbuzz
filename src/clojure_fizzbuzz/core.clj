@@ -21,10 +21,20 @@
     5 "Buzz"
   })
 
-  (def divisors (keys dictionary))
-  (def divisors (filter #(multiple? number %) divisors))
-  (def result (map dictionary divisors))
-  (def result (reduce str result))
+  ;(def divisors (keys dictionary))
+  ;(def divisors (filter #(multiple? number %) divisors))
+  ;(def result (map dictionary divisors))
+  ;(def result (reduce str result))
+
+  (def result
+    (reduce str
+      (map dictionary
+        (filter #(multiple? number %)
+          (keys dictionary)
+        )
+      )
+    )
+  )
 
   (if (clojure.string/blank? result)
     (str number)
