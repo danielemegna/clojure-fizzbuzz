@@ -21,13 +21,10 @@
     5 "Buzz"
   })
 
-
-  (def result "")
-  (doseq [[divisor label] dictionary]
-    (if (multiple? number divisor)
-      (def result (str result label))
-    )
-  )
+  (def divisors (keys dictionary))
+  (def divisors (filter #(multiple? number %) divisors))
+  (def result (map dictionary divisors))
+  (def result (reduce str result))
 
   (if (clojure.string/blank? result)
     (str number)
