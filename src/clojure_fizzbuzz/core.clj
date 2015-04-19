@@ -10,6 +10,9 @@
   "Sure"
 )
 
-(defn fizzbuzz[x]
-  (str x)
+(defn fizzbuzz[number]
+  (if (= 0 (rem number 3))
+    "Fizz"
+    (str number)
+  )
 )

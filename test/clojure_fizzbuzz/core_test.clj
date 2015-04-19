@@ -16,3 +16,9 @@
   (is (= "4" (fizzbuzz 4)))
   (is (= "431" (fizzbuzz 431)))
 )
+
+(deftest multiples-of-three-should-returns-fizz
+  (is (= "Fizz" (fizzbuzz 3)))
+  (is (= "Fizz" (fizzbuzz 9)))
+  (is (= "Fizz" (fizzbuzz 72)))
+)
