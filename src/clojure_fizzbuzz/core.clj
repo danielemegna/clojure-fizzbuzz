@@ -23,9 +23,9 @@
 
 
   (def result "")
-  (doseq [item dictionary]
-    (if (multiple? number (key item))
-      (def result (str result (val item)))
+  (doseq [[divisor label] dictionary]
+    (if (multiple? number divisor)
+      (def result (str result label))
     )
   )
 
