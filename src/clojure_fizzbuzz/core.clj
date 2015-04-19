@@ -9,3 +9,7 @@
 (defn this-function-exists []
   "Sure"
 )
+
+(defn fizzbuzz[x]
+  (str x)
+)
