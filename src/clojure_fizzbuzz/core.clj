@@ -10,6 +10,10 @@
   "Sure"
 )
 
+(defn multiple? [number divisor]
+  (= 0 (rem number divisor))
+)
+
 (defn fizzbuzz [number]
   
   (def dictionary {
@@ -18,10 +22,10 @@
   })
 
 
-  (def result
-    (str
-      (if (= 0 (rem number 3)) (dictionary 3) "")
-      (if (= 0 (rem number 5)) (dictionary 5) "")
+  (def result "")
+  (doseq [item dictionary]
+    (if (multiple? number (key item))
+      (def result (str result (val item)))
     )
   )
 
@@ -31,3 +35,4 @@
   )
 
 )
+
