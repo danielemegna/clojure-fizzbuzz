@@ -11,11 +11,14 @@
 )
 
 (defn fizzbuzz [number]
-  (if (= 0 (rem number 3))
-    "Fizz"
-    (if (= 0 (rem number 5))
-      "Buzz"
-      (str number)
+  (if (and (= 0 (rem number 3)) (= 0 (rem number 5)))
+    "FizzBuzz"
+    (if (= 0 (rem number 3))
+      "Fizz"
+      (if (= 0 (rem number 5))
+        "Buzz"
+        (str number)
+      )
     )
   )
 )

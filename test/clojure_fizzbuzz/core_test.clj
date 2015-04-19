@@ -29,3 +29,10 @@
   (is (= "Buzz" (fizzbuzz 50)))
   (is (= "Buzz" (fizzbuzz 175)))
 )
+
+(deftest multiples-of-three-and-five-should-returns-fizzbuzz
+  (is (= "FizzBuzz" (fizzbuzz 15)))
+  (is (= "FizzBuzz" (fizzbuzz 45)))
+  (is (= "FizzBuzz" (fizzbuzz 90)))
+  (is (= "FizzBuzz" (fizzbuzz 210)))
+)
